@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+    <head>
+        <title>airquality</title>
+    </head>
+    <body>
+        <h1>Air Quality</h1>
+        <br/>
+
+        <form action="#" th:action="@{/setRegion}" th:object="${region}" method="GET">
+            Name: <input type="text" name="name" th:field="*{name}"/><br/>
+
+            <button name="submit" type="submit" value="0">Submit</button>
+        </form>
+
+        <textarea rows="12" th:text="${region.printAirQual()}"></textarea>
+
+
+    </body>
+</html>
